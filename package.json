@@ -1,0 +1,14 @@
+{
+  "name": "okitty",
+  "version": "0.1.0",
+  "description": "Okitty application gateway",
+  "author": "Karl Lew",
+  "private": false,
+  "scripts": {
+    "test": "scripts/test.js"
+  },
+  "dependencies": {
+    "axios": "^0.19.2"
+  },
+  "devDependencies": {}
+}
