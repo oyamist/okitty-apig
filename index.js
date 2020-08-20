@@ -9,12 +9,14 @@ exports.handler = async (event, context) => {
 
     let body;
     let statusCode = 200;
-    let { env } = process;
+    let { env } = process || {};
     try {
+        if (!env.CLIENT_SECRET) {
+            throw new Error("Expected environment variable: CLIENT_SECRET");
+        }
         body = {
             version: `okitty-apig ${version}`,
             event,
-            env,
         };
     } catch(e) {
         statusCode = 400;
