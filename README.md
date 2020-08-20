@@ -17,7 +17,7 @@ Build deployment zipfile ZIPFILENAME
 ./scripts/build.js ZIPFILENAME
 ```
 
-Use your AWS Lambda console to *Create function*:
+Use your AWS Lambda console to **Create function**:
 
 * **Author from scratch**
 * **Function name:** `okitty-apig`
