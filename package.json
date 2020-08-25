@@ -1,14 +1,38 @@
 {
-  "name": "okitty",
+  "name": "okitty-apig",
   "version": "0.1.0",
   "description": "Okitty application gateway",
   "author": "Karl Lew",
   "private": false,
+  "license": "MIT",
   "scripts": {
-    "test": "scripts/test.js"
+    "dev": "nuxt",
+    "build": "npm run build:nuxt && npm run build:lambda",
+    "build:nuxt": "nuxt build",
+    "start": "nuxt start",
+    "lambda": "scripts/lambda.js",
+    "generate": "nuxt generate",
+    "build:lambda": "scripts/build.js && cd lambda && npm install",
+    "test": "npm run test:verbose",
+    "test:verbose": "mocha --inline-diffs",
+    "test:test": "mocha -w -R min --inline-diffs -g TEST"
   },
   "dependencies": {
     "axios": "^0.19.2"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "@nuxtjs/axios": "^5.12.1",
+    "@nuxtjs/eslint-config": "^2.0.0",
+    "@nuxtjs/eslint-module": "^1.0.0",
+    "@nuxtjs/pwa": "^3.0.0-0",
+    "@nuxtjs/vuetify": "^1.0.0",
+    "babel-eslint": "^10.0.1",
+    "dotenv": "^8.2.0",
+    "eslint": "^6.7.2",
+    "eslint-plugin-nuxt": ">=0.4.2",
+    "file-saver": "^2.0.2",
+    "mocha": "^8.1.1",
+    "nuxt": "^2.14.3",
+    "should": "^13.2.3"
+  }
 }

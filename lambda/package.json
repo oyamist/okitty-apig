@@ -1,0 +1,9 @@
+{
+  "name": "okitty-apig",
+  "description": "Okitty application gateway",
+  "author": "Karl Lew",
+  "version": "0.1.0",
+  "dependencies": {
+    "axios": "^0.19.2"
+  }
+}
